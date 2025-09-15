@@ -4,163 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Association</title>
+  <title>ASTRA - Cybersecurity Association</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- Loading Screen -->
-  <div id="loading-screen">
-    <video autoplay muted loop class="bg-video">
-      <source src="videos/loading.mp4" type="video/mp4">
-    </video>
-    <p>Loading<span class="dots"></span></p>
-  </div>
-
-
   <!-- Header -->
   <header>
     <nav>
-      <!-- <div class="logo">Cybersecurity Association</div> -->
-      <div class="logo"><img src="images/KMCT LOGO-WHITE.png" alt="" class="ietm-logo"></div>
-      <div class="logo"><img src="images/astra_logo.png" alt="" class="image-logo"></div>
+      <div class="logo">
+        <img src="images/astra_logo.png" alt="ASTRA Logo" class="logo-img">
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#programs">Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Workshops</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="video-container">
-      <video autoplay muted loop class="bg-video">
-        <source src="videos/intro_home.mp4" type="video/mp4">
-      </video>
-      <div class="hero-content">
-        <h1>ASTRA</h1>
-        <p>Empowering the next generation of cybersecurity experts.</p>
-        <a href="#about" class="btn">Learn More</a>
+    <div class="hero-content">
+      <h1>ASTRA</h1>
+      <p>The Cybersecurity Association of KMCT IETM</p>
+      <p>Empowering B.Tech Cybersecurity students with live classes, workshops, and real-world training.</p>
+      <a href="#about" class="btn">Discover More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About ASTRA</h2>
+    <p>
+      ASTRA is the official cybersecurity association of the B.Tech Cybersecurity program at KMCT Institute of
+      Emerging Technologies and Management.  
+    </p>
+    <p>
+      We introduce students to <b>live classes, technical workshops, Capture The Flag (CTF) competitions,
+      and hands-on cybersecurity training</b>. Our vision is to create a platform where students can
+      collaborate, innovate, and grow into the next generation of ethical hackers and security professionals.
+    </p>
+  </section>
+
+  <!-- Workshops/Events Section -->
+  <section id="events" class="events">
+    <h2>Workshops & Live Classes</h2>
+    <div class="event-cards">
+      <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Ethical Hacking Workshop</h3>
+        <p>Hands-on introduction to penetration testing and ethical hacking tools.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Blue Team Training</h3>
+        <p>Learn incident response, SIEM tools, and defensive security techniques.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-flag"></i>
+        <h3>Capture The Flag (CTF)</h3>
+        <p>Compete in challenges that test real-world cybersecurity skills.</p>
       </div>
     </div>
   </section>
 
-
-
-
-
-  <!-- Programs Section -->
-  <section id="programs" class="programs">
-
-    <div class="video-container">
-      <video autoplay muted loop id="bg-video">
-        <source src="videos/programe.mp4" type="video/mp4">
-      </video>
-      <div class="overlay">
-        <h2>Our Events</h2>
-        <div class="program-cards">
-          <div class="ticket card">
-            <img src="images/1000283068.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283069.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283070.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283071.svg" alt="">
-          </div>
-        </div>
-      </div>
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Workshop">
+      <img src="images/gallery2.jpg" alt="Live Class">
+      <img src="images/gallery3.jpg" alt="Team">
     </div>
-  
-    <div class="video-container">
-      <video autoplay muted loop id="bg-video">
-        <source src="videos/programe.mp4" type="video/mp4">
-      </video>
-      <div class="overlay">
-        <div class="program-cards">
-          <div class="ticket card">
-            <img src="images/1000283072.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283073.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283074.svg" alt="">
-          </div>
-          <div class="ticket card">
-            <img src="images/1000283075.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
   </section>
- 
 
-
-  <!-- about section  -->
-  <!-- <section class="about" id="about">
-    <div class="video-container">
-      <video autoplay muted loop id="bg-video">
-        <source src="videos/about.mp4" type="video/mp4">
-      </video>
-      <div class="overlay">
-        <div class="content">
-          <h2>About ASTRA</h2>
-          <p>ASTRA is the cybersecurity association of KMCT Institute of Emerging Technologies and Management. We are
-            dedicated to fostering a strong community of ethical hackers, security enthusiasts, and tech innovators. Our
-            mission is to spread awareness, conduct workshops, and provide hands-on experience in the field of
-            cybersecurity.</p>
-        </div>
-      </div>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:astra@kmct.edu">astra@kmct.edu</a></p>
+    <p>Follow us on social media:</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
-  </section>  -->
-
-
-
-
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Cybersecurity Association. All rights reserved.</p>
+    <p>&copy; 2025 ASTRA - Cybersecurity Association | KMCT IETM</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-  <script src="script.js"></script>
-
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyDTbQLdQFj7uesXgwUNN0GHqT_nG_vk_DM",
-      authDomain: "astratest1-5782f.firebaseapp.com",
-      projectId: "astratest1-5782f",
-      storageBucket: "astratest1-5782f.firebasestorage.app",
-      messagingSenderId: "656638235914",
-      appId: "1:656638235914:web:53297d22ac61d94fcdd6f3",
-      measurementId: "G-BKNZJHVB1K"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
 </body>
 
 </html>
