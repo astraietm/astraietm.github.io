@@ -1,248 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Astra — Cybersecurity Student</title>
-  <meta name="description" content="Astra: Portfolio for a cybersecurity student. Projects, skills, certifications, and contact." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1724; /* deep navy */
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#6ee7b7; /* mint */
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      color-scheme: dark;
-    }
-    *{box-sizing: border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
-      background: linear-gradient(180deg,var(--bg) 0%, #08101a 100%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:24px;
-    }
-    .container{max-width:1080px;margin:0 auto}
-    header{
-      display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;
-    }
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:grid;place-items:center;font-weight:700;color:#052018
-    }
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{
-      display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;margin-bottom:28px;
-    }
-    .card{background:linear-gradient(180deg,var(--card), rgba(10,16,24,0.6));padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,12,0.6);}
-
-    .intro h1{margin:0 0 6px 0;font-size:28px}
-    .intro p{margin:0;color:var(--muted)}
-    .cta{margin-top:14px;display:flex;gap:10px}
-    .btn{border:0;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#052018}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .profile{display:flex;flex-direction:column;gap:12px}
-    .avatar{width:100%;height:220px;border-radius:10px;background:linear-gradient(135deg,#072032,#0d2540);display:flex;flex-direction:column;justify-content:center;align-items:center}
-    .avatar h2{margin:0}
-
-    section{margin-bottom:18px}
-    h3{margin:0 0 12px 0}
-
-    .skills{display:flex;flex-wrap:wrap;gap:12px}
-    .skill{flex:1 1 220px;background:var(--glass);padding:12px;border-radius:10px}
-    .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px}
-    .bar{height:8px;background:var(--glass-2);border-radius:999px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent), #60a5fa)}
-
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-    .project p{color:var(--muted);font-size:14px}
-    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
-
-    .certs{display:flex;flex-direction:column;gap:8px}
-    .cert{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:var(--glass)}
-
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr}
-      .avatar{height:180px}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Association</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-         <img src="assets/logo.png" alt="Astra Logo" style="height:48px; width:48px; border-radius:8px;" />
-        <div>
-          <div style="font-weight:700">Astra</div>
-          <div style="font-size:13px;color:var(--muted)">Cybersecurity Student • Ethical Hacking • Blue Team</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certs</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="card intro">
-          <h1>Hi — I'm Astra</h1>
-          <p>I'm a cybersecurity student focused on network security, web application testing (ethical), incident response, and defensive hardening. I build safe lab demos, document my learnings, and follow strict ethical rules.</p>
-          <div class="cta">
-            <button class="btn btn-primary" onclick="downloadCV()">Download CV</button>
-            <a href="#projects" class="btn btn-ghost">View Projects</a>
-          </div>
-
-          <section id="about" style="margin-top:18px">
-            <h3>About</h3>
-            <p style="color:var(--muted)">I practice in a controlled lab environment and never test anything without explicit authorization. Areas of study: penetration testing methodology, vulnerability management, secure coding reviews, forensics, and cloud security basics.</p>
-          </section>
-
-          <section id="skills">
-            <h3>Core Skills</h3>
-            <div class="skills">
-              <div class="skill">
-                <div class="meta"><span>Network Security</span><span>85%</span></div>
-                <div class="bar"><i style="width:85%"></i></div>
-              </div>
-              <div class="skill">
-                <div class="meta"><span>Web App Testing</span><span>78%</span></div>
-                <div class="bar"><i style="width:78%"></i></div>
-              </div>
-              <div class="skill">
-                <div class="meta"><span>Forensics</span><span>65%</span></div>
-                <div class="bar"><i style="width:65%"></i></div>
-              </div>
-              <div class="skill">
-                <div class="meta"><span>Threat Hunting</span><span>70%</span></div>
-                <div class="bar"><i style="width:70%"></i></div>
-              </div>
-            </div>
-          </section>
-
-        </div>
-
-        <aside class="profile card">
-          <div class="avatar">
-            <div style="text-align:center">
-              <h2>Astra</h2>
-              <div style="color:var(--muted);font-size:13px">Cybersecurity Student</div>
-            </div>
-          </div>
-
-          <div class="card" style="padding:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-              <strong>Contact</strong>
-              <a href="#contact" style="font-size:13px;color:var(--muted);text-decoration:none">Get in touch</a>
-            </div>
-            <div style="font-size:13px;color:var(--muted)">Email: <a href="mailto:astra@example.com" style="color:var(--accent);text-decoration:none">astra@example.com</a></div>
-            <div style="font-size:13px;color:var(--muted);margin-top:6px">Location: India</div>
-          </div>
-
-          <div class="card" style="padding:12px">
-            <strong>Quick Links</strong>
-            <div style="display:flex;flex-direction:column;margin-top:8px">
-              <a href="#projects" style="text-decoration:none;color:var(--muted);margin-bottom:6px">Projects & Demos</a>
-              <a href="#certs" style="text-decoration:none;color:var(--muted);margin-bottom:6px">Certifications</a>
-              <a href="#blog" style="text-decoration:none;color:var(--muted)">Notes / Blog</a>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="projects" class="card">
-        <h3>Projects</h3>
-        <div class="projects">
-          <article class="project">
-            <h4>VulnLab — Web App CTF</h4>
-            <p>Safe-in-lab web application intentionally seeded with low-medium vulnerabilities for learning OWASP Top 10 and exploitation in an authorized environment.</p>
-            <div class="tags"><span class="tag">Web Security</span><span class="tag">CTF</span><span class="tag">OWASP</span></div>
-          </article>
-
-          <article class="project">
-            <h4>BlueTeam Playbook</h4>
-            <p>Incident response playbook and scripts to collect artifact evidence, triage, and contain incidents inside a corporate test environment.</p>
-            <div class="tags"><span class="tag">Forensics</span><span class="tag">IR</span></div>
-          </article>
-
-          <article class="project">
-            <h4>Network Hardening Scripts</h4>
-            <p>Shell and Ansible snippets to enforce secure baseline on Linux hosts and network devices (demo only).</p>
-            <div class="tags"><span class="tag">Automation</span><span class="tag">Hardening</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="certs" class="card">
-        <h3>Certifications & Training</h3>
-        <div class="certs">
-          <div class="cert"><div>CompTIA Security+ (prep)</div><div style="color:var(--muted);font-size:13px">In progress</div></div>
-          <div class="cert"><div>Intro to Forensics — University Lab</div><div style="color:var(--muted);font-size:13px">Completed</div></div>
-          <div class="cert"><div>Web App Security Workshop</div><div style="color:var(--muted);font-size:13px">Completed</div></div>
-        </div>
-      </section>
-
-      <section id="blog" class="card">
-        <h3>Notes & Blog</h3>
-        <p style="color:var(--muted)">Short write-ups of lab findings, safe exploit demos, defensive config recipes, and cheat sheets. (Write-ups are redacted to respect privacy and non-disclosure where required.)</p>
-      </section>
-
-      <section id="contact" class="card">
-        <h3>Contact</h3>
-        <p style="color:var(--muted)">Want to collaborate, offer an internship, or have an authorized lab assessment? Reach out using the contact details or send an email.</p>
-
-        <form onsubmit="event.preventDefault(); contactMe();" style="display:flex;flex-direction:column;gap:8px;max-width:560px">
-          <input id="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required />
-          <input id="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required />
-          <textarea id="message" rows="4" placeholder="Message (include purpose / authorization)" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required></textarea>
-          <div style="display:flex;gap:8px">
-            <button class="btn btn-primary" type="submit">Send</button>
-            <button class="btn btn-ghost" type="button" onclick="clearForm()">Clear</button>
-          </div>
-        </form>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>Built ethically • Lab-only testing • Never test systems without permission</div>
-      <div style="margin-top:8px">© Astra — Cybersecurity Student</div>
-    </footer>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <video autoplay muted loop class="bg-video">
+      <source src="videos/loading.mp4" type="video/mp4">
+    </video>
+    <p>Loading<span class="dots"></span></p>
   </div>
 
-  <script>
-    function downloadCV(){
-      // placeholder: replace with real CV link or blob URL
-      const url = 'https://example.com/astra-cv.pdf';
-      window.open(url, '_blank');
-    }
-    function contactMe(){
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name||!email||!message){alert('Please fill all fields.');return}
-      // For safety: this demo does not send emails — replace with your own backend or mailto
-      alert('Thanks '+name+" — this page is a demo. Replace the contact handler with a secure backend or mailto link.");
-      clearForm();
-    }
-    function clearForm(){document.getElementById('name').value='';document.getElementById('email').value='';document.getElementById('message').value='';}
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <!-- <div class="logo">Cybersecurity Association</div> -->
+      <div class="logo"><img src="images/KMCT LOGO-WHITE.png" alt="" class="ietm-logo"></div>
+      <div class="logo"><img src="images/astra_logo.png" alt="" class="image-logo"></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#programs">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="video-container">
+      <video autoplay muted loop class="bg-video">
+        <source src="videos/intro_home.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>ASTRA</h1>
+        <p>Empowering the next generation of cybersecurity experts.</p>
+        <a href="#about" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Programs Section -->
+  <section id="programs" class="programs">
+
+    <div class="video-container">
+      <video autoplay muted loop id="bg-video">
+        <source src="videos/programe.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <h2>Our Events</h2>
+        <div class="program-cards">
+          <div class="ticket card">
+            <img src="images/1000283068.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283069.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283070.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283071.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="video-container">
+      <video autoplay muted loop id="bg-video">
+        <source src="videos/programe.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <div class="program-cards">
+          <div class="ticket card">
+            <img src="images/1000283072.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283073.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283074.svg" alt="">
+          </div>
+          <div class="ticket card">
+            <img src="images/1000283075.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+ 
+
+
+  <!-- about section  -->
+  <!-- <section class="about" id="about">
+    <div class="video-container">
+      <video autoplay muted loop id="bg-video">
+        <source src="videos/about.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <div class="content">
+          <h2>About ASTRA</h2>
+          <p>ASTRA is the cybersecurity association of KMCT Institute of Emerging Technologies and Management. We are
+            dedicated to fostering a strong community of ethical hackers, security enthusiasts, and tech innovators. Our
+            mission is to spread awareness, conduct workshops, and provide hands-on experience in the field of
+            cybersecurity.</p>
+        </div>
+      </div>
+    </div>
+  </section>  -->
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cybersecurity Association. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDTbQLdQFj7uesXgwUNN0GHqT_nG_vk_DM",
+      authDomain: "astratest1-5782f.firebaseapp.com",
+      projectId: "astratest1-5782f",
+      storageBucket: "astratest1-5782f.firebasestorage.app",
+      messagingSenderId: "656638235914",
+      appId: "1:656638235914:web:53297d22ac61d94fcdd6f3",
+      measurementId: "G-BKNZJHVB1K"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
-</html>
 
+</html>
