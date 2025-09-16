@@ -29,7 +29,6 @@
   <section id="home" class="hero-section">
     <video class="hero-video" autoplay muted loop>
       <source src="videos/hero_background.mp4" type="video/mp4">
-      <!-- fallback image/video if needed -->
     </video>
     <div class="hero-overlay">
       <div class="hero-text">
@@ -43,10 +42,10 @@
   <!-- About Section -->
   <section id="about" class="about-section container">
     <h2>About Us</h2>
-    <p>ASTRA is the association for B.Tech Cybersecurity students at KMCT IETM. We organize workshops, live classes, CTFs, and provide hands-on learning to build future cybersecurity professionals.</p>
+    <p>ASTRA is the association for B.Tech Cybersecurity students at KMCT IETM. We organize workshops, live classes, CTFs, and provide hands‑on learning to build future cybersecurity professionals.</p>
   </section>
 
-  <!-- Events Section (Grid of Cards) -->
+  <!-- Events Section -->
   <section id="events" class="events-section container">
     <h2>Workshops & Events</h2>
     <div class="events-grid">
@@ -71,11 +70,10 @@
           <p>Dec 15, 2025 • Test your skills</p>
         </div>
       </div>
-      <!-- add more cards -->
     </div>
   </section>
 
-  <!-- Upcoming Events Timeline -->
+  <!-- Upcoming Timeline -->
   <section id="upcoming" class="upcoming-section container">
     <h2>Upcoming Events</h2>
     <div class="timeline">
@@ -85,7 +83,7 @@
       </div>
       <div class="timeline-item">
         <div class="date">Nov 2, 2025</div>
-        <div class="desc"><strong>Live Class: Blue Team vs Red Team</strong><br>Hands-on defence vs attack</div>
+        <div class="desc"><strong>Live Class: Blue Team vs Red Team</strong><br>Hands‑on defence vs attack</div>
       </div>
       <div class="timeline-item">
         <div class="date">Dec 15, 2025</div>
@@ -94,19 +92,20 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Gallery with Slideshow -->
   <section id="gallery" class="gallery-section container">
     <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/gallery1.jpg" alt="Gallery 1"></div>
-      <div class="gallery-item"><img src="images/gallery2.jpg" alt="Gallery 2"></div>
-      <div class="gallery-item"><img src="images/gallery3.jpg" alt="Gallery 3"></div>
-      <div class="gallery-item"><img src="images/gallery4.jpg" alt="Gallery 4"></div>
-      <!-- more -->
-    </div>
+    <div class="slideshow-container" id="slideshow"></div>
+
+    <!-- Navigation -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Dots indicator -->
+    <div class="dots" id="dots"></div>
   </section>
 
-  <!-- Contact / Call to Action -->
+  <!-- Contact -->
   <section id="contact" class="contact-section container">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:astra@kmct.edu">astra@kmct.edu</a></p>
@@ -121,6 +120,55 @@
   <footer class="site-footer">
     <p>&copy; 2025 ASTRA | KMCT IETM. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Gallery slideshow
+    const galleryImages = [
+      "gallery/img1.jpg",
+      "gallery/img2.jpg",
+      "gallery/img3.jpg",
+      "gallery/img4.jpg"
+    ];
+
+    const slideshow = document.getElementById("slideshow");
+    const dotsContainer = document.getElementById("dots");
+
+    galleryImages.forEach((src, index) => {
+      let slide = document.createElement("div");
+      slide.classList.add("slide");
+      slide.innerHTML = `<img src="${src}" alt="Gallery Image ${index+1}">`;
+      slideshow.appendChild(slide);
+
+      let dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.setAttribute("onclick", `currentSlide(${index+1})`);
+      dotsContainer.appendChild(dot);
+    });
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    // Auto slideshow
+    setInterval(() => { plusSlides(1); }, 5000);
+  </script>
 
 </body>
 </html>
