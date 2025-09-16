@@ -59,7 +59,7 @@ nav {
 .hero .btn {
   display: inline-block;
   background: #00ffcc;
-  color: #000;
+  color: #53fb07;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -80,7 +80,7 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00ffcc;
+  color: #53fb07;
 }
 
 /* Events */
