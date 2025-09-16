@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASTRA - Cybersecurity Association</title>
+  <title>ASTRA | Cybersecurity Association</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
       <div class="logo">
-        <img src="assects/astra_logo.png" alt="ASTRA Logo" class="logo-img">
+        <img src="images/astra_logo.png" alt="ASTRA Logo">
       </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#events">Workshops</a></li>
+        <li><a href="#events">Events</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -28,79 +26,101 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>ASTRA</h1>
-      <p>The Cybersecurity Association of KMCT IETM</p>
-      <p>Empowering B.Tech Cybersecurity students with live classes, workshops, and real-world training.</p>
-      <a href="#about" class="btn">Discover More</a>
+  <section id="home" class="hero-section">
+    <video class="hero-video" autoplay muted loop>
+      <source src="videos/hero_background.mp4" type="video/mp4">
+      <!-- fallback image/video if needed -->
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>ASTRA</h1>
+        <p>Cybersecurity Association of KMCT IETM</p>
+        <a href="#events" class="btn btn-primary">Join Upcoming Events</a>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About ASTRA</h2>
-    <p>
-      ASTRA is the official cybersecurity association of the B.Tech Cybersecurity program at KMCT Institute of
-      Emerging Technologies and Management.  
-    </p>
-    <p>
-      We introduce students to <b>live classes, technical workshops, Capture The Flag (CTF) competitions,
-      and hands-on cybersecurity training</b>. Our vision is to create a platform where students can
-      collaborate, innovate, and grow into the next generation of ethical hackers and security professionals.
-    </p>
+  <section id="about" class="about-section container">
+    <h2>About Us</h2>
+    <p>ASTRA is the association for B.Tech Cybersecurity students at KMCT IETM. We organize workshops, live classes, CTFs, and provide hands-on learning to build future cybersecurity professionals.</p>
   </section>
 
-  <!-- Workshops/Events Section -->
-  <section id="events" class="events">
-    <h2>Workshops & Live Classes</h2>
-    <div class="event-cards">
-      <div class="card">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Ethical Hacking Workshop</h3>
-        <p>Hands-on introduction to penetration testing and ethical hacking tools.</p>
+  <!-- Events Section (Grid of Cards) -->
+  <section id="events" class="events-section container">
+    <h2>Workshops & Events</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="images/event1.jpg" alt="Event 1">
+        <div class="event-info">
+          <h3>Ethical Hacking Workshop</h3>
+          <p>Oct 10, 2025 • Learn pen testing basics</p>
+        </div>
       </div>
-      <div class="card">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Blue Team Training</h3>
-        <p>Learn incident response, SIEM tools, and defensive security techniques.</p>
+      <div class="event-card">
+        <img src="images/event2.jpg" alt="Event 2">
+        <div class="event-info">
+          <h3>Blue Team Training</h3>
+          <p>Nov 2, 2025 • Defensive security skills</p>
+        </div>
       </div>
-      <div class="card">
-        <i class="fas fa-flag"></i>
-        <h3>Capture The Flag (CTF)</h3>
-        <p>Compete in challenges that test real-world cybersecurity skills.</p>
+      <div class="event-card">
+        <img src="images/event3.jpg" alt="Event 3">
+        <div class="event-info">
+          <h3>CTF Challenge</h3>
+          <p>Dec 15, 2025 • Test your skills</p>
+        </div>
+      </div>
+      <!-- add more cards -->
+    </div>
+  </section>
+
+  <!-- Upcoming Events Timeline -->
+  <section id="upcoming" class="upcoming-section container">
+    <h2>Upcoming Events</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">Oct 10, 2025</div>
+        <div class="desc"><strong>Ethical Hacking Workshop</strong><br>Reconaissance & scanning basics</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Nov 2, 2025</div>
+        <div class="desc"><strong>Live Class: Blue Team vs Red Team</strong><br>Hands-on defence vs attack</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Dec 15, 2025</div>
+        <div class="desc"><strong>CTF Challenge</strong><br>Puzzles, web exploits, crypto</div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
+  <!-- Gallery -->
+  <section id="gallery" class="gallery-section container">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Workshop">
-      <img src="images/gallery2.jpg" alt="Live Class">
-      <img src="images/gallery3.jpg" alt="Team">
+      <div class="gallery-item"><img src="images/gallery1.jpg" alt="Gallery 1"></div>
+      <div class="gallery-item"><img src="images/gallery2.jpg" alt="Gallery 2"></div>
+      <div class="gallery-item"><img src="images/gallery3.jpg" alt="Gallery 3"></div>
+      <div class="gallery-item"><img src="images/gallery4.jpg" alt="Gallery 4"></div>
+      <!-- more -->
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- Contact / Call to Action -->
+  <section id="contact" class="contact-section container">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:astra@kmct.edu">astra@kmct.edu</a></p>
-    <p>Follow us on social media:</p>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 ASTRA - Cybersecurity Association | KMCT IETM</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 ASTRA | KMCT IETM. All rights reserved.</p>
   </footer>
 
 </body>
-
 </html>
-
